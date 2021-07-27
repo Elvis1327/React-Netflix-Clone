@@ -1,0 +1,45 @@
+
+.footer-netflix{
+    width: 100%;
+    padding: 120px 40px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.creator-netflix h1{
+    color: white;
+    font-size: 30px;
+}
+.heart{
+    color: red;
+}
+
+// SEGUNDO DIV
+._netflix-footer-social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;
+}
+
+._netflix-footer-social-media h1{
+    color: white;
+}
+
+._netflix-footer-social-media ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.netflix-media{
+    font-size: 30px;
+}
+
+
+

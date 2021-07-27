@@ -1,0 +1,64 @@
+
+
+._main-questions-netflix{
+    width: 100%;
+    padding: 120px 40px;
+    background: black;
+}
+._main-questions-netflix h1{
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+._buttons-netflix{
+    width: 55%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+.boton-netflix-toggle{
+    padding: 13px 30px;
+    text-align: start;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    background-color: #303030;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+
+// TOGGLE BOTONS IF CLICKED
+.fass{
+    transform: rotate(180deg);
+}
+.fass2{
+    transform: rotate(180deg);
+}
+.fass3{
+    transform: rotate(180deg);
+}
+// FIN DEL BOTTONS IF CLICKEDS
+
+
+// 
+._all-info-netflix-togle{
+    background-color: #303030;
+    margin-top: 0px;
+    padding: 30px;
+    color: white;
+    font-size: 22px;
+    position: relative;
+    top: -7px;
+}
+
+

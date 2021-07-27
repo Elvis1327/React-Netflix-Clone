@@ -1,0 +1,143 @@
+
+// FIN DEL NAVBAR
+.main-container-login{
+    width: 100%;
+    position: relative;
+    &::before{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.9));
+        z-index: 1;
+        position: absolute;
+    }
+    &::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(0,0,0,0.1) 70%, rgba(0,0,0,0.7));
+        z-index: 1;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+    }
+}
+.img-background-login{
+    width: 100%;
+    height: 800px;
+    // padding: 100px;
+    background-image: url('https://res.cloudinary.com/dtp3gqean/image/upload/v1626405355/netflix-banner_ea5okm.jpg');
+    background-size: cover;
+}
+
+
+// FORM
+._login-form{
+    width: 451px;
+    height: 450px;
+    margin: 0px auto;
+    padding: 60px 68px 40px;
+    background: rgba(0, 0, 0, 0.801);
+    backdrop-filter: blur(1px);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 3;
+    max-width: 100%;
+}
+
+._login-form h1{
+    font-size: 33px;
+    color: white;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 0px;
+}
+
+.input{
+    padding: 12px;
+    width: 260px;
+    color: rgb(218, 211, 211);
+    background-color: #333333;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    width: 300px;
+}
+
+._login-boton-form{
+    display: block;
+    margin: 0px auto;
+    width: 300px;
+    outline: none;
+    background-color: $red-net;
+    padding: 12px;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: 900;
+    border: none;
+    border-radius: 6px;
+    margin-top: 20px;
+}
+
+._h2-login-from{
+    color: #ccc;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+// LINKSS
+._links{
+    color: white;
+    font-size: helvetica;
+    font-weight: 600;
+
+    &:hover{
+        color: white;
+    }
+}
+
+
+@media screen and (max-width: 599px){
+    .main-container-login{
+        background-color: black;
+        // height: 100vh;
+    }
+    .img-background-login{
+        background-image: none;
+        height: 100vh;
+    }
+
+    ._login-form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    ._login-form{
+        padding: 20px;
+        height: 370px;
+    }
+
+    .inputs{
+        width: 100%;
+    }
+
+    .input{
+        width: 100%;
+    }
+    ._h2-login-from{
+    margin-top: 30px;
+}
+
+};
+
+

@@ -1,0 +1,27 @@
+.header{
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    height: 70px;
+}
+.h1-main-navbar{
+    font-size: 40px;
+    margin-left: 30px;
+    font-family: 'poppins', sans-serif;
+    color: $red-net;
+    text-transform: uppercase;
+    font-weight: 600;
+    position: relative;
+    z-index: 2;
+}
+
+@media screen and (max-width: 599px){
+    .h1-main-navbar{
+        margin: 0px;
+        font-size: 23px;
+        font-weight: 900;
+    }
+}
+
+
+

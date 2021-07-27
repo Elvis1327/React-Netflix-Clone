@@ -1,0 +1,126 @@
+
+
+// FIRST BANNER
+._card-enjoy-enjoy{
+    width: 100%;
+    padding: 100px 40px;
+    background-color: black;
+}
+._card-enjoy{
+    max-width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+// IMAGEN
+._enjoy-netflix-img{
+    width: 500px;
+    position: relative;
+    &::before{
+        content: '';
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        background: linear-gradient(to bottom, transparent 10%, rgba(0, 0, 0, 0.979));
+    }
+}
+._enjoy-netflix-img img{
+    max-width: 100%;
+}
+// FIN IMAGEN
+
+._enjoy-netflix{
+    width: 50%;
+}
+._enjoy-netflix h1{
+    color: white;
+    font-size: 50px;
+}
+._enjoy-netflix p{
+    color: white;
+    font-size: 25px;
+}
+
+// SEGUNDO BANNER WATCH WATCH
+._card-watch-watch{
+    width: 100%;
+    padding: 100px 40px;
+    background-color: black;
+}
+._card-watch{
+    max-width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 10px;
+}
+// IMAGEN
+._watch-netflix-img{
+    width: 500px;
+    max-width: 100%;
+    position: relative;
+    &::before{
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, transparent 20%, rgba(0,0,0,0.9));
+    }
+}
+._watch-netflix-img img{
+    max-width: 100%;
+}
+// FIN IMAGEN
+
+._watch-netflix{
+    width: 50%;
+    max-width: 100%;
+}
+._watch-netflix h1{
+    color: white;
+    font-size: 50px;
+}
+._watch-netflix p{
+    color: white;
+    font-size: 25px;
+}
+
+@media screen and (max-width: 599px){
+    // WATCH
+    ._card-watch-watch{
+        padding: 40px 10px;
+    }
+    ._card-watch{
+        width: 400px;
+        margin: 0px auto;
+        max-width: 100%;
+    }
+    ._card-watch{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+    ._watch-netflix{
+        width: 100%;
+    }
+    ._watch-netflix h1{
+        font-size: 20px;
+    }
+    ._watch-netflix p{
+        font-size: 15px;
+    }
+    ._watch-netflix-img{
+        width: 300px;
+        max-width: 100%;
+    }
+}
+
+
