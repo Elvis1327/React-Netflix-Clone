@@ -5,8 +5,6 @@ export const Questions = () => {
     const [ netflixToggle2, setNetflixToggle2 ] = useState(false);
     const [ netflixToggle3, setNetflixToggle3 ] = useState(false);
 
-
-
     return (
         <div className="_main-questions-netflix">
             <h1>

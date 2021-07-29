@@ -6,6 +6,8 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .creator-netflix h1{
@@ -41,5 +43,18 @@
     font-size: 30px;
 }
 
-
+@media screen and (max-width: 599px) {
+    .footer-netflix{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+    .creator-netflix h1{
+        color: white;
+        font-size: 30px;
+        margin-bottom: 2px;
+    }
+}
 

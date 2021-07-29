@@ -8,6 +8,12 @@ $red-net: #E50914;
 @import './components/home';
 @import './components/questions';
 @import './components/footer';
+@import './components/loader';
 
-
+.errors_form{
+    margin: 0px;
+    margin-left: 10px;
+    color: $red-net;
+    font-family: 'poppins', sans-serif;
+}
 
