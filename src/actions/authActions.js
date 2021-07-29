@@ -42,7 +42,6 @@ export const registerFormData = (name, email, password) => {
                 dispatch(loginLoadingFalse());
             }
         }catch(err){
-            console.log(err);
             dispatch(loginLoadingFalse());
         }
     }
