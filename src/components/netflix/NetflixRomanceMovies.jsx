@@ -8,7 +8,6 @@ export const RomcanceMovies = () => {
     const dispatch = useDispatch();
     const { romanceMovies } = useSelector(state => state.netflixData);
     const [ paginate, setPaginate ] = useState(0);
-    console.log(romanceMovies)
     const imgNotFound = 'https://res.cloudinary.com/dtp3gqean/image/upload/v1627913888/notfound_xyfmfb.png';
 
     useEffect(()=>{

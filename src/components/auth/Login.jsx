@@ -14,8 +14,8 @@ export const Login = () => {
     const [errors, setErrors] = useState({});
 
     const { formValues, handleInputChange } = useForm({
-        email: 'test1@gmail.com',
-        password: '123456'
+        email: '',
+        password: ''
     });
     const { email, password } = formValues;
 
@@ -67,7 +67,6 @@ export const Login = () => {
                                     placeholder="Introduce your Email"
                                     name="email"
                                     onChange={handleInputChange}
-                                    value={email}
                                     autoComplete="off"
                                 />
                             </div>
@@ -79,7 +78,6 @@ export const Login = () => {
                                     placeholder="Introduce your Password"
                                     name="password"
                                     onChange={handleInputChange}
-                                    value={password}
                                     autoComplete="off"
                                 />
                             </div>
