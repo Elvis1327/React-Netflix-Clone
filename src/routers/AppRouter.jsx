@@ -5,8 +5,8 @@ import { validarToken } from '../actions/authActions';
 import { Login } from '../components/auth/Login';
 import { Register } from '../components/auth/Register';
 import { NetflixScreen } from '../components/netflix/NetflixScreen';
-import { PrivateRoute } from './PrivateRoute'
-import { PublicRoute } from './PublicRoute'
+import { PrivateRoute } from './PrivateRoute';
+import { PublicRoute } from './PublicRoute';
 
 
 export const AppRouter = () => {

@@ -9,11 +9,19 @@ $red-net: #E50914;
 @import './components/questions';
 @import './components/footer';
 @import './components/loader';
+@import './components/netflix-banner';
+@import './components/netflix-movies';
 
 .errors_form{
     margin: 0px;
     margin-left: 10px;
     color: $red-net;
     font-family: 'poppins', sans-serif;
+}
+
+._netflix-main-main-container{
+    background-color: black;
+    z-index: -1;
+    min-height: 800px;
 }
 

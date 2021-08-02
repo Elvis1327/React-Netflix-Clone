@@ -58,7 +58,6 @@ const register = (user) => {
 export const validarToken = () => {
     return async (dispatch) => {
         const resp = await getUserAuthen();
-        console.log(resp)
         dispatch(login({
             name: resp.name,
             email: resp.email
@@ -67,6 +66,21 @@ export const validarToken = () => {
             name: resp.name,
             email: resp.email
         }))
+    }
+};
+
+
+const logout = () => {
+    return {
+        type: TYPES.authLogout,
+        payload: false
+    }
+};
+
+export const authLogoutAccount = () => {
+    return (dispatch) => {
+        localStorage.clear();
+        dispatch(logout())
     }
 }
 
