@@ -49,13 +49,14 @@
 
 // MENU TOGGLE
 ._toggle-account-netflix{
-    width: 120px;
+    width: 140px;
     background-color: black;
     text-align: center;
     border-radius: 10px;
     position: absolute;
     top: 55px;
-    left: -42px;
+    left: -62px;
+    overflow: hidden;
 }
 
 .netflix-toggle-ul{
@@ -75,7 +76,8 @@
     }
 }
 
-._toggle-account-netflix h1{
+.netflix-toggle-li h1{
+    width: 50px;
     font-size: 20px;
     font-family: 'poppins',sans-serif;
     color: white;
@@ -84,7 +86,6 @@
 
 .toggle-account-netflix-button{
     display: block;
-    margin-left: -10px;
     width: 100px;
     border: none;
     outline: none;
