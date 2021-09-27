@@ -89,7 +89,7 @@ export const Register = () => {
                             {errors?.msgEmail && <p className="errors_form"> {errors.msgEmail} </p>}
                             <div className="inputs-register">
                                 <input 
-                                    type="text" 
+                                    type="password" 
                                     className="input-register"
                                     placeholder="Introduce your Password"
                                     onChange={handleInputChange}

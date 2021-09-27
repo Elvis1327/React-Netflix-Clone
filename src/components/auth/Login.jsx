@@ -73,7 +73,7 @@ export const Login = () => {
                             {errors?.msgEmail && <p className="errors_form"> {errors.msgEmail} </p>}
                             <div className="inputs">
                                 <input 
-                                    type="text" 
+                                    type="password" 
                                     className="input"
                                     placeholder="Introduce your Password"
                                     name="password"
