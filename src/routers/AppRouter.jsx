@@ -1,51 +1,43 @@
 import React, {useEffect} from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { validarToken } from '../actions/authActions';
-import { Login } from '../components/auth/Login';
-import { Register } from '../components/auth/Register';
-import { NetflixScreen } from '../components/netflix/NetflixScreen';
+import { AuthRoute } from './AuthRoute';
+import { NetflixRoute } from './NetflixRoute';
 import { PrivateRoute } from './PrivateRoute';
 import { PublicRoute } from './PublicRoute';
 
-
 export const AppRouter = () => {
     const dispatch = useDispatch();
-    const { check } = useSelector(state => state.auth)
 
     useEffect(()=>{
         dispatch(validarToken());
     },[dispatch])
 
     return (
-        <Router>
+        <BrowserRouter>
             <div>
-                <Switch>
-                    <PublicRoute
-                        exact
-                        path="/login" 
-                        component={Login}
-                        isAuthenticated={check}
+                <Routes>
+                    <Route
+                        path="netflix/*"
+                        element={
+                            <PrivateRoute>
+                                <NetflixRoute />
+                            </PrivateRoute>
+                        }
                     />
-
-                    <PublicRoute
-                        exact 
-                        path="/register" 
-                        component={Register}
-                        isAuthenticated={check}
+                    <Route
+                        path="/*" 
+                        element={
+                            <PublicRoute>
+                                <AuthRoute />
+                            </PublicRoute>
+                        }
                     />
-
-                    <PrivateRoute
-                        exact
-                        path="/netflixscreen"
-                        component={NetflixScreen}
-                        isAuthenticated={check}
-                    />
-                    
-                    <Redirect to="/login" />
-                </Switch>
+                </Routes>
             </div>
-        </Router>
+        </BrowserRouter>
     )
 }
 

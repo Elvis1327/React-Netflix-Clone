@@ -1,25 +1,21 @@
 import React from 'react';
-import { Route, Redirect } from 'react-router-dom';
-import Proptypes from 'prop-types';
+import { Navigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
-export const PublicRoute = ({
-    isAuthenticated,
-    component: Component,
-    ...rest
-}) => {
+
+export const PublicRoute = ({children}) => {
+
+    const { check } = useSelector(state => state.auth)
+
     return (
-        <Route {...rest}
-            component={(props) => (
-                (isAuthenticated === false)
-                ? <Component {...props} />
-                : <Redirect to="/netflixscreen" />
-            )}
-        />
+        <>
+            {check === false
+                ? (children)
+                : (<Navigate to="/netflix/netflix-screen" />)
+            }
+        </>
     )
 }
 
-PublicRoute.prototype = {
-    isAuthenticated: Proptypes.bool.isRequired
-};
 
 
