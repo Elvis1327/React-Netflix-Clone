@@ -14,11 +14,11 @@ export const Register = () => {
     const [errors, setErrors] = useState({});
 
     const { handleInputChange, formValues } = useForm({
-        name: '',
+        nombre: '',
         email: '',
         password: ''
     });
-    const { name, email, password } = formValues;
+    const { nombre, email, password } = formValues;
 
     const handleRegisterSubmit = async (e) => {
         e.preventDefault();
@@ -27,13 +27,13 @@ export const Register = () => {
             setErrors({})
         };
 
-        dispatch(registerFormData(name, email, password));
+        dispatch(registerFormData(nombre, email, password));
 
     };
 
     const validateFormRegister = () => {
         
-        if(name.length < 5){
+        if(nombre.length < 5){
             setErrors({msgName: 'El name debe de tener 5 o mas caracteres'});
             return false;
         };
@@ -71,7 +71,7 @@ export const Register = () => {
                                     className="input-register"
                                     placeholder="Introduce your Name"
                                     onChange={handleInputChange}
-                                    name="name"
+                                    name="nombre"
                                     autoComplete="off"
                                     />
                             </div>
