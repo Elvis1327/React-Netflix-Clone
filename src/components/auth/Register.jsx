@@ -104,7 +104,7 @@ export const Register = () => {
                                 Sign Up
                             </button>
                         </form>
-                        <h2 className="_h2-register-from">Have account on <strong>Elvis Movies</strong>? <Link to="/login" className="_links"> Login</Link></h2>
+                        <h2 className="_h2-register-from">Have account on <strong>Elvis Movies</strong>? <Link to="/" className="_links"> Login</Link></h2>
                     </>
                     }
                 </div>
