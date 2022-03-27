@@ -6,9 +6,9 @@ export const loginFormData = (email, password) => {
     return async (dispatch) => {
         dispatch(loginLoadingTrue());
         try {
-            const resp = await loginForm(email,password);
+            const resp = await loginForm(email, password);
             if(resp.ok === true){
-                const bodyLogin = {email: resp.email, name: resp.name};
+                const bodyLogin = {email, password};
                 dispatch(login(bodyLogin));
                 dispatch(loginLoadingFalse());
                 localStorage.setItem('token', resp.token);
@@ -59,7 +59,6 @@ export const validarToken = () => {
     return async (dispatch) => {
         const resp = await getUserAuthen();
         dispatch(login({
-            name: resp.name,
             email: resp.email
         }));
         dispatch(register({
