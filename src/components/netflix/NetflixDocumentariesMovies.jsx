@@ -28,19 +28,25 @@ export const DocumentariesNetflix = () => {
               className="_swiper-component"
               speed={1000}
               breakpoints={{
-                  1000: {
-                      slidesPerView: 5,
-                      slidesPerGroup: 5
-                  },
-                  800: {
-                    slidesPerView: 4,
-                    slidesPerGroup: 4
-                  },
-                    350: {
+                1000: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5
+                },
+                800: {
+                  slidesPerView: 4,
+                  slidesPerGroup: 4
+                },
+                  500: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  speed: 400
+                },
+                350: {
                     slidesPerView: 2,
-                    slidesPerGroup: 1
-                  }
-              }}
+                    slidesPerGroup: 1,
+                    speed: 400
+                }
+            }}
             >    
             <>
                 {documentariesMovies.map(documentaries => (

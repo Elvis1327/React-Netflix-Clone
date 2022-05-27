@@ -26,26 +26,32 @@ export const ComedyMovies = () => {
               speed={1000}
               className="_swiper-component"
               breakpoints={{
-                  1000: {
-                      slidesPerView: 5,
-                      slidesPerGroup: 5
-                  },
-                  800: {
-                    slidesPerView: 4,
-                    slidesPerGroup: 4
-                  },
-                    350: {
+                1000: {
+                    slidesPerView: 5,
+                    slidesPerGroup: 5
+                },
+                800: {
+                  slidesPerView: 4,
+                  slidesPerGroup: 4
+                },
+                  500: {
+                  slidesPerView: 3,
+                  slidesPerGroup: 3,
+                  speed: 400
+                },
+                350: {
                     slidesPerView: 2,
-                    slidesPerGroup: 1
-                  }
-              }}
+                    slidesPerGroup: 1,
+                    speed: 400
+                }
+            }}
             >
                 <>
                     {comedyMovies.map(comedy => (
                         <SwiperSlide key={comedy.id}>
                             <img 
                                 src={`https://image.tmdb.org/t/p/original${comedy?.backdrop_path}`} 
-                                alt="picture" 
+                                alt="pic" 
                                 className="netflix-movies-img" 
                             />
                         </SwiperSlide>

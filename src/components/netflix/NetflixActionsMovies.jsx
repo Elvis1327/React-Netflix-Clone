@@ -35,11 +35,13 @@ export const ActionsMovies = () => {
                   },
                     500: {
                     slidesPerView: 3,
-                    slidesPerGroup: 3
+                    slidesPerGroup: 3,
+                    speed: 400
                   },
                   350: {
                       slidesPerView: 2,
-                      slidesPerGroup: 1
+                      slidesPerGroup: 1,
+                      speed: 400
                   }
               }}
             >
