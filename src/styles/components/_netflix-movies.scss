@@ -1,51 +1,24 @@
 
 
-// NETFLIX MOVIES
-
-.netflix-container-movies{
-    width: 100%;
-    padding: 30px 45px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+._swiper-component{
+    padding: 10px;
 }
 
 .name-movies-netflix-h1{
     color: white;
-    margin-bottom: 15px;
+    margin-bottom: 5px;
+    margin-left: 15px;
 }
 
-.netflix-movies{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-}
-
+// Netflix movie img
 .netflix-movies-img{
-    width: 230px;
-    height: 132px;
-    transition: all 400ms;
-    cursor: pointer;
-    &:hover{
-        transform: scale(1.1);
-    }
-}
-.buttons-paginate-netflix{
-    border: none;
-    background-color: black;
-    height: 130px;
-
-    &:focus{
-        border: 2px solid rgb(155, 152, 152);
-    }
-}
-.buttons-paginate-netflix i {
-    color: $red-net;
-    font-size: 25px;
+    padding: 0px;
+    max-width: 100%;
+    margin: 0px;
+    border-radius: 20px;
+    transform: scale(1);
 }
 
-// NETFLIX MOVIES
+
 
 
