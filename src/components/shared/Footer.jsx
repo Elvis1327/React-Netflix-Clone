@@ -4,8 +4,7 @@ export const Footer = () => {
     return (
         <div className="footer-netflix">
             <div className="creator-netflix">
-                <h1>Creator:</h1>
-                <h1>Created with love by Elvis <i className="fas heart fa-heart"></i></h1>
+                <h1>Created with love by Elvis</h1>
             </div>
             <div className="_netflix-footer-social-media">
                 <h1>Social Media</h1>
