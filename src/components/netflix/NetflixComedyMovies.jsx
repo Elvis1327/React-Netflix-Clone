@@ -1,56 +1,58 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Navigation, Pagination } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
 import { netflixComedyMovies } from '../../actions/netflixData';
 
 
 export const ComedyMovies = () => {
     const dispatch = useDispatch();
     const { comedyMovies } = useSelector(state => state.netflixData);
-    const [ paginate, setPaginate ] = useState(0);
 
     useEffect(()=>{
         dispatch(netflixComedyMovies());
     },[dispatch]);
 
-    const paginateMovies = (number) => {
-        const $movies = comedyMovies.slice(number, number + 5)
-        return $movies;
-    };
-    const result = paginateMovies(paginate);
-
-    const handlePrevPage = () => {
-        if(paginate > 0){
-            setPaginate(paginate - 5)
-        };
-    };
-
-    const handleNextPage = () => {
-        if(paginate <= 20){
-            setPaginate(paginate + 5)
-        };
-    };
-
     return (
-        <div className="netflix-container-movies">
+        <>
             <h1 className="name-movies-netflix-h1">
                 Comedy Movies
             </h1>
-            <div className="netflix-movies">
-                <button onClick={handlePrevPage} className="buttons-paginate-netflix" disabled={paginate < 0}>
-                    <i className="fas fa-chevron-circle-left"></i>
-                </button>
-                {result.map(comedy => (
-                    <div key={comedy.id}>
-                            <img src={`https://image.tmdb.org/t/p/original${comedy?.backdrop_path}`} alt="pic" className="netflix-movies-img" />
-                        
-                    </div>
-                ))
-                }
-                <button onClick={handleNextPage} className="buttons-paginate-netflix" disabled={paginate >= 15}>
-                    <i className="fas fa-chevron-circle-right"></i>
-                </button>
-            </div>
-        </div>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              spaceBetween={10}
+              navigation={true}
+              speed={1000}
+              className="_swiper-component"
+              breakpoints={{
+                  1000: {
+                      slidesPerView: 5,
+                      slidesPerGroup: 5
+                  },
+                  800: {
+                    slidesPerView: 4,
+                    slidesPerGroup: 4
+                  },
+                    350: {
+                    slidesPerView: 2,
+                    slidesPerGroup: 1
+                  }
+              }}
+            >
+                <>
+                    {comedyMovies.map(comedy => (
+                        <SwiperSlide key={comedy.id}>
+                            <img 
+                                src={`https://image.tmdb.org/t/p/original${comedy?.backdrop_path}`} 
+                                alt="picture" 
+                                className="netflix-movies-img" 
+                            />
+                        </SwiperSlide>
+                    ))}
+                </>
+            </Swiper>
+        </>
     )
 }
 

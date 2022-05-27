@@ -23,21 +23,21 @@ export const BannerNetflix = () => {
                         </h1>
                         <div className="banner-netflix-buttons">
                             <button className="netflix-movies-buttons-reproducir">
-                            <i className="fas fa-play"></i>
+                                <i className="fas fa-play"></i>
                                 Play
                             </button>
                             <button className="netflix-movies-buttons-info">More Information</button>
                         </div>
                         <div className="netflix-movie-about">
                             <p>
-                                {aleatory?.overview}
+                                {`${aleatory?.overview.substring(0,100)}....`}
                             </p>
                         </div>
                     </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
 
 
