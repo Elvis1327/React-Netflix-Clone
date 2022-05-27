@@ -1,10 +1,11 @@
 import React, {useState} from 'react'
-import { Navbar } from '../shared/Navbar';
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import Validator from 'validator';
+
 import { Footer } from '../shared/Footer';
 import { useForm } from '../../hooks/useForm';
-import Validator from 'validator';
-import { useDispatch, useSelector } from 'react-redux';
+import { Navbar } from '../shared/Navbar';
 import { loginFormData } from '../../actions/authActions';
 
 export const Login = () => {
@@ -18,19 +19,18 @@ export const Login = () => {
         password: ''
     });
     const { email, password } = formValues;
-
+    
+    // Submit function for from
     const handleFormSubmit = (e) => {
         e.preventDefault();
-
         if(validateForm()){
             setErrors({})
-        }
-
+        };
         dispatch(loginFormData(email,password));
     };
 
+    // Validate input Form
     const validateForm = () => {
-        
         if(!Validator.isEmail(email)){
             setErrors({msgEmail: 'El email debe de tener caracteres validos'});
             return false
@@ -39,7 +39,6 @@ export const Login = () => {
             setErrors({msgPassword: 'El Password debe  tener 6 caracteres o mas'});
             return false;
         };
-
         return true;
     }
 

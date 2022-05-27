@@ -1,18 +1,21 @@
 import React, {useState} from 'react'
 import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { useForm } from '../../hooks/useForm';
 import { Footer } from '../shared/Footer';
 import { Home } from '../shared/Home';
 import { Navbar } from '../shared/Navbar';
 import Validator from 'validator';
-import { useDispatch, useSelector } from 'react-redux';
 import { registerFormData } from '../../actions/authActions';
 
 export const Register = () => {
+
     const dispatch = useDispatch();
     const { formLoading } = useSelector(state => state.formLoading);
     const [errors, setErrors] = useState({});
 
+    // Custom hook
     const { handleInputChange, formValues } = useForm({
         nombre: '',
         email: '',
@@ -20,19 +23,17 @@ export const Register = () => {
     });
     const { nombre, email, password } = formValues;
 
-    const handleRegisterSubmit = async (e) => {
+    // Submit Function for form
+    const handleRegisterSubmit = (e) => {
         e.preventDefault();
-
         if(validateFormRegister()){
             setErrors({})
         };
-
         dispatch(registerFormData(nombre, email, password));
-
     };
 
+    // Validating inputs of form
     const validateFormRegister = () => {
-        
         if(nombre.length < 5){
             setErrors({msgName: 'El name debe de tener 5 o mas caracteres'});
             return false;
@@ -45,7 +46,6 @@ export const Register = () => {
             setErrors({msgPassword: 'El Password debe  tener 6 caracteres o mas'});
             return false;
         };
-
         return true;
     }
 
